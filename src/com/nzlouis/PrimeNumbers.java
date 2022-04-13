@@ -68,6 +68,22 @@ public class PrimeNumbers {
      * @param number
      * @return Boolean
      */
+    public static Boolean isPrimeNumber (int number) {
+        if(number <= 1)
+            return false;
+        initializePrimeNumberArray(number);
+        if (!primeNumbersArray[number]){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    /**
+     * Check if it's prime number
+     * @param number
+     * @return Boolean
+     */
     public static void initializePrimeNumberArray (int number) {
         int index = 2;// Prime numbers start at 2
         System.out.println();
@@ -84,20 +100,5 @@ public class PrimeNumbers {
     }
 
 
-    /**
-     * Check if it's prime number
-     * @param number
-     * @return Boolean
-     */
-    public static Boolean isPrimeNumber (int number) {
-        if(number <= 1)
-            return false;
-        initializePrimeNumberArray(number);
-        if (!primeNumbersArray[number]){
-            return true;
-        }else{
-            return false;
-        }
-    }
 
 }
