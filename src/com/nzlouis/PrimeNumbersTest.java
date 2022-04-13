@@ -94,13 +94,13 @@ public class PrimeNumbersTest {
         PrimeNumbers.getPrimeNumbers(primeNumbers);
     }
 
-    @Test(timeout = 1000)
+    @Test(timeout = 1300)
     public void testPrimeNumbersSumShouldReturnBeforeTimeoutThirtyMillion() {
         int primeNumbers = 30_000_000;
         PrimeNumbers.getPrimeNumbersSum(primeNumbers);
     }
 
-    @Test(timeout = 1000)
+    @Test(timeout = 1300)
     public void testPrimeNumbersShouldReturnBeforeTimeoutThirtyMillion() {
         int primeNumbers = 30_000_000;
         PrimeNumbers.getPrimeNumbers(primeNumbers);
