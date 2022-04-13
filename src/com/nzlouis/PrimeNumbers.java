@@ -21,7 +21,7 @@ public class PrimeNumbers {
         if(number == 2)
             return 2L;
 
-        initializePrimeNumberArray(number);
+        initializePrimeNumbersArray(number);
         long sum = 0L;
         for (int i = 2; i <= number; i++){
             if (!primeNumbersArray[i]){
@@ -45,7 +45,7 @@ public class PrimeNumbers {
             return list;
         }
 
-        initializePrimeNumberArray(number);
+        initializePrimeNumbersArray(number);
         long sum = 0L;
         for (int i = 2; i <= number; i++) {
             if (!primeNumbersArray[i]){
@@ -64,14 +64,14 @@ public class PrimeNumbers {
     public static Boolean isPrimeNumber (int number) {
         if(number <= 1)
             return false;
-        initializePrimeNumberArray(number);
+        initializePrimeNumbersArray(number);
         return !primeNumbersArray[number];
     }
 
     /**
      * Check if it's prime number
      */
-    public static void initializePrimeNumberArray (int number) {
+    public static void initializePrimeNumbersArray (int number) {
         int index = 2;// Prime numbers start at 2
         System.out.println();
         while (index <= number) {
