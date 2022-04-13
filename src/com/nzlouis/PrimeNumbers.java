@@ -13,19 +13,16 @@ public class PrimeNumbers {
 
     /**
      * Find the sum of all prime numbers up to number
-     * @param number
      * @return long sum
      */
     public static Long getPrimeNumbersSum(int number) {
         if(number <= 1)
-            return 0l;
+            return 0L;
         if(number == 2)
-            return 2l;
-        if(number > 2147483647)
-            throw new IllegalArgumentException();
+            return 2L;
 
         initializePrimeNumberArray(number);
-        Long sum = 0l;
+        long sum = 0L;
         for (int i = 2; i <= number; i++){
             if (!primeNumbersArray[i]){
                 sum += i;
@@ -37,7 +34,6 @@ public class PrimeNumbers {
 
     /**
      * Find all prime numbers up to number
-     * @param number
      * @return List<Integer>
      */
     public static List<Integer> getPrimeNumbers(int number) {
@@ -48,11 +44,9 @@ public class PrimeNumbers {
             list.add(2);
             return list;
         }
-        if(number > 2147483647)
-            throw new IllegalArgumentException();
 
         initializePrimeNumberArray(number);
-        Long sum = 0l;
+        long sum = 0L;
         for (int i = 2; i <= number; i++) {
             if (!primeNumbersArray[i]){
                 list.add(i);
@@ -65,30 +59,23 @@ public class PrimeNumbers {
 
     /**
      * Check if it's prime number
-     * @param number
      * @return Boolean
      */
     public static Boolean isPrimeNumber (int number) {
         if(number <= 1)
             return false;
         initializePrimeNumberArray(number);
-        if (!primeNumbersArray[number]){
-            return true;
-        }else{
-            return false;
-        }
+        return !primeNumbersArray[number];
     }
 
     /**
      * Check if it's prime number
-     * @param number
-     * @return Boolean
      */
     public static void initializePrimeNumberArray (int number) {
         int index = 2;// Prime numbers start at 2
         System.out.println();
         while (index <= number) {
-            if (!primeNumbersArray[index]) {// If it is a prime number
+            if (!primeNumbersArray[index]) {// If it is not a prime number
                 int k = 2;
                 while (index * k <= number) {//Set integer multiple to true
                     primeNumbersArray[index * k] = true;
@@ -98,7 +85,5 @@ public class PrimeNumbers {
             index++;
         }
     }
-
-
 
 }

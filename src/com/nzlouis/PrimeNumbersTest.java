@@ -13,13 +13,13 @@ public class PrimeNumbersTest {
 
     @Test
     public void testPrimeNumbersSumShouldReturnCorrectSum() {
-        assertEquals(0l, (long) PrimeNumbers.getPrimeNumbersSum(-2));
-        assertEquals(0l, (long) PrimeNumbers.getPrimeNumbersSum(0));
-        assertEquals(0l, (long) PrimeNumbers.getPrimeNumbersSum(1));
-        assertEquals(2l, (long) PrimeNumbers.getPrimeNumbersSum(2));
-        assertEquals(5l, (long) PrimeNumbers.getPrimeNumbersSum(3));
-        assertEquals(10l, (long) PrimeNumbers.getPrimeNumbersSum(5));
-        assertEquals(17l, (long) PrimeNumbers.getPrimeNumbersSum(10));
+        assertEquals(0L, (long) PrimeNumbers.getPrimeNumbersSum(-2));
+        assertEquals(0L, (long) PrimeNumbers.getPrimeNumbersSum(0));
+        assertEquals(0L, (long) PrimeNumbers.getPrimeNumbersSum(1));
+        assertEquals(2L, (long) PrimeNumbers.getPrimeNumbersSum(2));
+        assertEquals(5L, (long) PrimeNumbers.getPrimeNumbersSum(3));
+        assertEquals(10L, (long) PrimeNumbers.getPrimeNumbersSum(5));
+        assertEquals(17L, (long) PrimeNumbers.getPrimeNumbersSum(10));
     }
 
     @Test
@@ -60,12 +60,12 @@ public class PrimeNumbersTest {
 
     @Test
     public void testPrimeNumbersShouldReturnCorrectNumbers() {
-        assertEquals(2l, (long) PrimeNumbers.getPrimeNumbers(2).get(0));
-        assertEquals(2l, (long) PrimeNumbers.getPrimeNumbers(3).get(0));
-        assertEquals(3l, (long) PrimeNumbers.getPrimeNumbers(3).get(1));
-        assertEquals(5l, (long) PrimeNumbers.getPrimeNumbers(5).get(2));
-        assertEquals(7l, (long) PrimeNumbers.getPrimeNumbers(7).get(3));
-        assertEquals(11l, (long) PrimeNumbers.getPrimeNumbers(11).get(4));
+        assertEquals(2L, (long) PrimeNumbers.getPrimeNumbers(2).get(0));
+        assertEquals(2L, (long) PrimeNumbers.getPrimeNumbers(3).get(0));
+        assertEquals(3L, (long) PrimeNumbers.getPrimeNumbers(3).get(1));
+        assertEquals(5L, (long) PrimeNumbers.getPrimeNumbers(5).get(2));
+        assertEquals(7L, (long) PrimeNumbers.getPrimeNumbers(7).get(3));
+        assertEquals(11L, (long) PrimeNumbers.getPrimeNumbers(11).get(4));
     }
 
     @Test
