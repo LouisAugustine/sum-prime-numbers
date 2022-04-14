@@ -76,7 +76,7 @@ public class PrimeNumbers {
         while (index <= number) {
             if (!primeNumbersArray[index]) {// If it is not a prime number
                 int k = 2;
-                while (index * k <= number) {//Set integer multiple to true
+                while (index * k <= number) {
                     primeNumbersArray[index * k] = true;
                     k++;
                 }
