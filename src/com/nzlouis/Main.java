@@ -7,7 +7,7 @@ public class Main {
 
         System.out.println("Function 1--------------");
         long start1 = System.currentTimeMillis();
-        System.out.println(PrimeNumbers.getPrimeNumbers(primeNumbers).toString());
+        System.out.println(PrimeNumbers.getPrimeNumbers(primeNumbers));
         long end1 = System.currentTimeMillis();
         System.out.println("The time cost is: " + (end1 - start1) + " millisecond");
 
