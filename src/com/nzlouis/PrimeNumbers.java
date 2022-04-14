@@ -9,7 +9,8 @@ import java.util.*;
  */
 public class PrimeNumbers {
 
-    static boolean[] primeNumbersArray = new boolean[50_000_000];
+    private static final boolean[] primeNumbersArray = new boolean[50_000_000];
+    private static int maximumPrimeNumberSaved;
 
     /**
      * Find the sum of all prime numbers up to number
@@ -23,11 +24,9 @@ public class PrimeNumbers {
 
         initializePrimeNumbersArray(number);
         long sum = 0L;
-        for (int i = 2; i <= number; i++){
-            if (!primeNumbersArray[i]){
+        for (int i = 2; i <= number; i++)
+            if (!primeNumbersArray[i])
                 sum += i;
-            }
-        }
 
         return sum;
     }
@@ -46,13 +45,9 @@ public class PrimeNumbers {
         }
 
         initializePrimeNumbersArray(number);
-        long sum = 0L;
-        for (int i = 2; i <= number; i++) {
-            if (!primeNumbersArray[i]){
+        for (int i = 2; i <= number; i++)
+            if (!primeNumbersArray[i])
                 list.add(i);
-                sum += i;
-            }
-        }
 
         return list;
     }
@@ -71,7 +66,11 @@ public class PrimeNumbers {
     /**
      * Check if it's prime number
      */
-    public static void initializePrimeNumbersArray (int number) {
+    private static void initializePrimeNumbersArray (int number) {
+        if(number <= maximumPrimeNumberSaved)
+            return;
+
+        maximumPrimeNumberSaved = number;
         int index = 2;// Prime numbers start at 2
         System.out.println();
         while (index <= number) {

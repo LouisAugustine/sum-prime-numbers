@@ -82,27 +82,31 @@ public class PrimeNumbersTest {
      * JUnit TimeOut Test
      * timeout = 300 - 1000 millisecond for 10_000_000 to 30_000_000 of numbers
      */
-    @Test(timeout = 300)
-    public void testPrimeNumbersSumShouldReturnBeforeTimeoutTenMillion() {
-        int primeNumbers = 10_000_000;
-        PrimeNumbers.getPrimeNumbersSum(primeNumbers);
-    }
 
-    @Test(timeout = 400)
-    public void testPrimeNumbersShouldReturnBeforeTimeoutForTenMillion() {
-        int primeNumbers = 10_000_000;
-        PrimeNumbers.getPrimeNumbers(primeNumbers);
-    }
 
     @Test(timeout = 1300)
-    public void testPrimeNumbersSumShouldReturnBeforeTimeoutThirtyMillion() {
+    public void testPrimeNumbersAndPrimeNumbersSumShouldReturnBeforeTimeoutThirtyMillion() {
         int primeNumbers = 30_000_000;
         PrimeNumbers.getPrimeNumbersSum(primeNumbers);
+        PrimeNumbers.getPrimeNumbers(primeNumbers);
     }
 
     @Test(timeout = 1300)
     public void testPrimeNumbersShouldReturnBeforeTimeoutThirtyMillion() {
         int primeNumbers = 30_000_000;
+        PrimeNumbers.getPrimeNumbers(primeNumbers);
+    }
+
+    @Test(timeout = 400)
+    public void testPrimeNumbersAndPrimeNumbersSumShouldReturnBeforeTimeoutTenMillion() {
+        int primeNumbers = 10_000_000;
+        PrimeNumbers.getPrimeNumbersSum(primeNumbers);
+        PrimeNumbers.getPrimeNumbers(primeNumbers);
+    }
+
+    @Test(timeout = 400)
+    public void testPrimeNumbersShouldReturnBeforeTimeoutForTenMillion() {
+        int primeNumbers = 10_000_000;
         PrimeNumbers.getPrimeNumbers(primeNumbers);
     }
 
