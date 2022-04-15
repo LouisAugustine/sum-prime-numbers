@@ -1,5 +1,6 @@
 package com.nzlouis;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,6 +11,12 @@ import static org.junit.Assert.*;
  *
  */
 public class PrimeNumbersTest {
+
+    @Before
+    public void before() {
+        int primeNumbers = 40_000_000;
+        PrimeNumbers.initializePrimeNumbersArray(primeNumbers);
+    }
 
     @Test
     public void testPrimeNumbersSumShouldReturnCorrectSum() {
@@ -84,27 +91,27 @@ public class PrimeNumbersTest {
      */
 
 
-    @Test(timeout = 1300)
+    @Test(timeout = 400)
     public void testPrimeNumbersAndPrimeNumbersSumShouldReturnBeforeTimeoutThirtyMillion() {
         int primeNumbers = 30_000_000;
         PrimeNumbers.getPrimeNumbersSum(primeNumbers);
         PrimeNumbers.getPrimeNumbers(primeNumbers);
     }
 
-    @Test(timeout = 1300)
+    @Test(timeout = 300)
     public void testPrimeNumbersShouldReturnBeforeTimeoutThirtyMillion() {
         int primeNumbers = 30_000_000;
         PrimeNumbers.getPrimeNumbers(primeNumbers);
     }
 
-    @Test(timeout = 400)
+    @Test(timeout = 200)
     public void testPrimeNumbersAndPrimeNumbersSumShouldReturnBeforeTimeoutTenMillion() {
         int primeNumbers = 10_000_000;
         PrimeNumbers.getPrimeNumbersSum(primeNumbers);
         PrimeNumbers.getPrimeNumbers(primeNumbers);
     }
 
-    @Test(timeout = 400)
+    @Test(timeout = 100)
     public void testPrimeNumbersShouldReturnBeforeTimeoutForTenMillion() {
         int primeNumbers = 10_000_000;
         PrimeNumbers.getPrimeNumbers(primeNumbers);

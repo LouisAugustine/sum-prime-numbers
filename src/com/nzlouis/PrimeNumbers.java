@@ -66,7 +66,7 @@ public class PrimeNumbers {
     /**
      * Check if it's prime number
      */
-    private static void initializePrimeNumbersArray (int number) {
+    public static void initializePrimeNumbersArray (int number) {
         if(number <= maximumPrimeNumberSaved)
             return;
 

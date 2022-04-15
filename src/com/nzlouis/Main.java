@@ -5,6 +5,9 @@ public class Main {
     public static void main(String[] args) {
         int primeNumbers = 10_000_000;
 
+        System.out.println("Initialize the prime numbers array--------------");
+        PrimeNumbers.initializePrimeNumbersArray(primeNumbers);
+
         System.out.println("Function 1--------------");
         long start1 = System.currentTimeMillis();
         System.out.println(PrimeNumbers.getPrimeNumbers(primeNumbers));
